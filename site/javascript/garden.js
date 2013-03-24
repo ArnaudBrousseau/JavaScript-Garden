@@ -135,7 +135,7 @@ function Page() {
         section: null,
         articule: null
     });
-    
+
     this.sections = new Sections(this);
     this.init();
 }
@@ -149,11 +149,11 @@ Page.prototype = {
             scrollLast: 0,
             resizeTimeout: null
         });
-        
+
         this.window.scroll(function() {
             that.onScroll();
         });
-        
+
         this.window.resize(function() {
             that.onResize();
         });
@@ -173,15 +173,15 @@ Page.prototype = {
                 });
             });
         }
-        
+
         // Show menu for tablets
         $('#show_menu').click(function (){
             var scrollTop = $.mobile ? that.window.scrollTop() : 0;
-            
+
             mainNav.slideDown(300).css('top', scrollTop);
             return false;
         });
-        
+
         $('#nav_main').click(function(){
             if(that.window.width() < 1000)
                 mainNav.slideUp(300);
@@ -217,4 +217,3 @@ _gaq.push(['_setAccount', 'UA-20768522-1'], ['_trackPageview']);
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
-

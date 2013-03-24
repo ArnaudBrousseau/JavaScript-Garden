@@ -41,7 +41,7 @@ html(lang=language)
 
             - if (section.parsed.index || section.articles.length > 0)
               ul
-                  
+
                 - each article in section.articles
                   li
                     a(href='#' + article.link)!=article.title
@@ -53,7 +53,7 @@ html(lang=language)
 
       a(id='nav_next_section', href='#') next section
         span(class='nav_section_name') section name
-      
+
       a(id='show_menu') show menu
 
     // Sections
@@ -87,12 +87,12 @@ html(lang=language)
         .
 
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js')
-    
+
     - if (language === baseLanguage)
       script(src='javascript/prettify.js')
       script(src='javascript/plugin.js')
       script(src='javascript/garden.js')
-    
+
     - else
       script(src='../javascript/prettify.js')
       script(src='../javascript/plugin.js')
